@@ -1,0 +1,72 @@
+# ~/.config/starship.toml
+[line_break]
+disabled = true
+
+[battery]
+full_symbol = " "
+charging_symbol = " "
+discharging_symbol = " "
+unknown_symbol = "🔌"
+
+[[battery.display]]
+threshold = 100
+style = "bold green"
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✖](bold red)"
+
+[cmd_duration]
+min_time = 0  # Show command duration always
+format = "took [$duration]($style) "
+show_milliseconds = true
+
+[directory]
+truncation_length = 5
+format = "[](bold 214)[$path]($style)[$lock_symbol]($lock_style) "
+style = "bold 214"
+
+[git_branch]
+format = " [$symbol$branch]($style) "
+symbol = "🍣 "
+style = "bold yellow"
+
+[git_commit]
+commit_hash_length = 8
+style = "bold white"
+
+[username]
+style_user = "bold blue"
+style_root = "bold red"
+show_always = true
+format = "[$user]($style)[](white)"
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style) "
+trim_at = "-"
+style = "bold purple"
+disabled = false
+
+[memory_usage]
+format = "$symbol[${ram}( | ${swap})]($style) "
+threshold = 70
+style = "bold dimmed white"
+disabled = false
+
+[package]
+disabled = true
+
+[python]
+format = "[$symbol$version]($style) "
+style = "bold green"
+
+[rust]
+format = "[$symbol$version]($style) "
+style = "bold green"
+
+[time]
+time_format = "%T"
+format = "🕙 $time($style) "
+style = "bright-white"
+disabled = true
