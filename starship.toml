@@ -3,10 +3,11 @@
 disabled = true
 
 [battery]
-full_symbol = " "
-charging_symbol = " "
-discharging_symbol = " "
+full_symbol = "󰁹"
+charging_symbol = "󰂐 "
+discharging_symbol = "󰂍 "
 unknown_symbol = "🔌"
+disabled = true
 
 [[battery.display]]
 threshold = 100
@@ -43,7 +44,7 @@ format = "[$user]($style)[](white)"
 
 [hostname]
 ssh_only = false
-format = "[$hostname]($style) "
+format = "[ $hostname]($style) "
 trim_at = "-"
 style = "bold purple"
 disabled = false
@@ -52,7 +53,7 @@ disabled = false
 format = "$symbol[${ram}( | ${swap})]($style) "
 threshold = 70
 style = "bold dimmed white"
-disabled = false
+disabled = true
 
 [package]
 disabled = true
